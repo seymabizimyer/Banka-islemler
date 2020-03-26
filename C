@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main(){
+	int islem;
+	int bakiye=1000;
+	int tutar;
+	
+	printf("Islemler\n1:Para Cekme\n2:Para Yatirma\n3:Havale yapma\n");
+	
+	printf("Islemi seciniz:");
+	scanf("%d",&islem);
+	switch(islem){
+		case 1:
+		printf("Bakiyeniz:%d\n",bakiye);
+		printf("Cekilecek Tutar:");
+		scanf("%d",&tutar);
+		if(tutar>bakiye){
+			printf("Bakiye yetersiz\n");
+		}
+		bakiye -=tutar;
+		printf("Bakiyeniz:%d",bakiye);
+		break;
+		case 2:
+			printf("Bakiyeniz:%d\n",bakiye);
+			printf("Yatirilacak Tutar:");
+			scanf("%d",&tutar);
+			bakiye +=tutar;
+			printf("Bakiyeniz:%d",bakiye);
+			break;
+		case 3:
+			
+			printf("Bakiyeniz:%d\n",bakiye);
+			printf("Havale yapilacak tutar:");
+			scanf("%d",&tutar);
+			if(tutar>bakiye){
+				printf("Bakiye yetersiz\n");
+			
+			}
+			bakiye -=tutar;
+			printf("Bakiyeniz:%d",bakiye);
+			break;
+		
+		
+		
+	}
+}
